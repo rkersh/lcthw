@@ -65,6 +65,8 @@ int main (int argc, char *argv[])
 	cur_name++, cur_age++) {
       printf("%s lived %d years so far.\n",
 	     *cur_name, *cur_age);
+      printf("address of cur_name: %p\n", cur_name);
+      printf("address of cur_age: %p\n", cur_age);
    }
    // print in reversed order
    /* for (cur_name = names + count - 1, */
