@@ -14,9 +14,15 @@ struct Person *
 Person_create (char *name, int age, int height, int weight)
 {
   struct Person *who = malloc(sizeof(struct Person));
-  assert (who != NULL);
+  char *namedup = NULL;
 
-  who->name = name;
+  assert (who != NULL);
+  assert (name != NULL);
+
+  namedup = strdup (name);
+  assert (namedup != NULL);
+
+  who->name = namedup;
   who->age = age;
   who->height = height;
   who->weight = weight;
